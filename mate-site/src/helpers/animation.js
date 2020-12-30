@@ -1,6 +1,4 @@
 import React from 'react';
-import styled from 'styled-components';
-import { motion, useMotionValue, useTransform } from 'framer-motion';
 
 const pageVariants = (direction, compDir) => {
     let movement;
@@ -34,27 +32,7 @@ const pageVariants = (direction, compDir) => {
 const pageTransition = {
     type: 'tween',
     ease: 'anticipate',
-    duration: 0.3,
+    duration: 0.2,
 };
-
-// const Container = styled(motion.div)`
-//     display: flex;
-//     justify-content: center;
-// `;
-
-// const Page = (direction, compDir) => {
-//     return (
-//         <Container
-//             style={{ background }}
-//             initial="initial"
-//             animate="in"
-//             exit="out"
-//             variants={pageVariants(direction, compDir)}
-//             transition={pageTransition}
-//         ></Container>
-//     );
-// };
-
-// const x = useMotionValue(0);
 
 export { pageVariants, pageTransition };

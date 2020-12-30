@@ -14,8 +14,8 @@ const MainImage = styled.div`
     display: flex;
     flex-direction: column;
     margin: 3em 2em;
-    height: 700px;
-    width: 500px;
+    height: 90%;
+    width: 700px;
     background-size: cover;
     background-image: url(${myImage});
     justify-content: flex-end;
@@ -27,6 +27,7 @@ const Content = styled.div`
     background: rgba(255, 255, 255, 0.85);
     border-radius: 10px;
     border-bottom: 1px solid #c9c9c9;
+    height: 200px;
 `;
 
 export const Card: React.FC<CardProps> = ({ name, price, matches, description }) => {
