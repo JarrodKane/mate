@@ -4,18 +4,32 @@ import { motion, useMotionValue, useTransform } from 'framer-motion';
 import styled from 'styled-components';
 
 import Card from './Card';
+import { pageVariants, pageTransition } from '../helpers/animation';
+
+interface SwipeProps {
+    direction: number;
+}
 
 const Box = styled(motion.div)`
     display: flex;
     justify-content: center;
 `;
 
-const Swipe = ({}) => {
+const Swipe: React.FC<SwipeProps> = ({ direction }) => {
     const x = useMotionValue(0);
     const background = useTransform(x, [-100, 0, 100], ['#f94144', '#f1faee', '#90be6d']);
 
+    const compDir = 2;
+
     return (
-        <Box style={{ background }}>
+        <Box
+            style={{ background }}
+            initial="initial"
+            animate="in"
+            exit="out"
+            variants={pageVariants(direction, compDir)}
+            transition={pageTransition}
+        >
             <motion.div drag="x" dragConstraints={{ left: 0, right: 0 }} style={{ x }}>
                 <Card
                     name="Test"

@@ -11,8 +11,8 @@ framer-motion for swipe actions
 
 
 ## Website goal
-[ ] allow for dragable components of matches
-[ ] filtering of matches into stages of application
-[ ] swipe action on cards
-[ ] Job hunter flow
-[ ] Job flow 
+- [ ] allow for dragable components of matches
+- [ ] filtering of matches into stages of application
+- [ ] swipe action on cards
+- [ ] Job hunter flow
+- [ ] Job flow 
