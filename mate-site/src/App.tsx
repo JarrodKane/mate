@@ -1,17 +1,26 @@
 import React from 'react';
 import './App.css';
-import Header from './components/Header';
-import Card from './components/Card';
-import DecPanel from './components/DecPanel';
 
-function App() {
+import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
+
+import Header from './components/Header';
+import Swipe from './components/Swipe';
+
+const App = () => {
     return (
         <div className="App">
-            <Header text={'Wow'} />
-            <Card />
-            <DecPanel text={'Wowww'} />
+            <Router>
+                <Header />
+
+                <Switch>
+                    <Route path="/chat">Chat</Route>
+                    <Route exact path="/">
+                        <Swipe />
+                    </Route>
+                </Switch>
+            </Router>
         </div>
     );
-}
+};
 
 export default App;
