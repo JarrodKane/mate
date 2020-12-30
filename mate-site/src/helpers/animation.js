@@ -1,14 +1,14 @@
 import React from 'react';
+import styled from 'styled-components';
+import { motion, useMotionValue, useTransform } from 'framer-motion';
 
 const pageVariants = (direction, compDir) => {
     let movement;
-    if (direction < compDir) {
+    if (direction > compDir) {
         movement = '-100';
     } else {
         movement = '100';
     }
-
-    console.log(`the direction is ${direction} and to the new ${compDir}`);
 
     const variant = {
         initial: {
@@ -34,7 +34,27 @@ const pageVariants = (direction, compDir) => {
 const pageTransition = {
     type: 'tween',
     ease: 'anticipate',
-    duration: 0.5,
+    duration: 0.3,
 };
+
+// const Container = styled(motion.div)`
+//     display: flex;
+//     justify-content: center;
+// `;
+
+// const Page = (direction, compDir) => {
+//     return (
+//         <Container
+//             style={{ background }}
+//             initial="initial"
+//             animate="in"
+//             exit="out"
+//             variants={pageVariants(direction, compDir)}
+//             transition={pageTransition}
+//         ></Container>
+//     );
+// };
+
+// const x = useMotionValue(0);
 
 export { pageVariants, pageTransition };

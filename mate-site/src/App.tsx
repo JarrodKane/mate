@@ -2,14 +2,19 @@ import React, { useState, useEffect } from 'react';
 import './App.css';
 import { AnimatePresence, motion, useMotionValue, useTransform } from 'framer-motion';
 import { Switch, Route, useLocation } from 'react-router-dom';
+import styled from 'styled-components';
 
 import Header from './components/Header';
+import DecPanel from './components/DecPanel';
 import Swipe from './components/Swipe';
+import Profile from './components/Profile';
+import Chat from './components/Chat';
 
-// enum Direction {
-//     Left = 1,
-//     Right,
-// }
+const WrapApp = styled.div`
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+`;
 
 const App = () => {
     const [direction, setDirection] = useState(2);
@@ -26,18 +31,23 @@ const App = () => {
     }, [location]);
 
     return (
-        <div className="App">
+        <WrapApp className="App">
             <Header />
             <AnimatePresence>
                 <Switch>
-                    <Route path="/chat">Chat</Route>
-                    <Route path="/profile">Profile</Route>
+                    <Route path="/chat">
+                        <Chat direction={direction} />
+                    </Route>
+                    <Route path="/profile">
+                        <Profile direction={direction} />
+                    </Route>
                     <Route exact path="/">
                         <Swipe direction={direction} />
                     </Route>
                 </Switch>
             </AnimatePresence>
-        </div>
+            <DecPanel />
+        </WrapApp>
     );
 };
 

@@ -13,6 +13,8 @@ interface SwipeProps {
 const Box = styled(motion.div)`
     display: flex;
     justify-content: center;
+
+    flex-grow: 1;
 `;
 
 const Swipe: React.FC<SwipeProps> = ({ direction }) => {
