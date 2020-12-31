@@ -13,17 +13,18 @@ interface CardProps {
 const MainImage = styled.div`
     display: flex;
     flex-direction: column;
-    margin: 3em 2em;
-    height: 90%;
+    margin: 2em 2em;
+    height: 95%;
     width: 700px;
     background-size: cover;
     background-image: url(${myImage});
-    justify-content: flex-end;
+    justify-content: center;
+    border-radius: 10px;
 `;
 
 const Content = styled.div`
     padding: 1em;
-    margin: -2em 2em;
+    margin: 2em;
     background: rgba(255, 255, 255, 0.85);
     border-radius: 10px;
     border-bottom: 1px solid #c9c9c9;

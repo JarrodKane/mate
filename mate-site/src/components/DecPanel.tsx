@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import IconButton from '@material-ui/core/IconButton';
 
 import FavoriteIcon from '@material-ui/icons/Favorite';
 import CancelIcon from '@material-ui/icons/Cancel';
@@ -53,9 +54,15 @@ const Container = styled.div`
 export const DecPanel: React.FC<DecPanelProps> = ({ text }) => {
     return (
         <Container>
-            <ButtonPass fontSize="large" />
-            <ButtonRedo fontSize="large" />
-            <ButtonLove fontSize="large" />
+            <IconButton>
+                <ButtonPass fontSize="large" />
+            </IconButton>
+            <IconButton>
+                <ButtonRedo fontSize="large" />
+            </IconButton>
+            <IconButton>
+                <ButtonLove fontSize="large" />
+            </IconButton>
         </Container>
     );
 };

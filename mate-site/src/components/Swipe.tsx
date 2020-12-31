@@ -18,7 +18,7 @@ const Box = styled(motion.div)`
 
 const Swipe: React.FC<SwipeProps> = ({ direction }) => {
     const x = useMotionValue(0);
-    const background = useTransform(x, [-100, 0, 100], ['#f94144', '#f1faee', '#90be6d']);
+    const background = useTransform(x, [-100, 0, 100], ['#f94144', '#ffffff', '#90be6d']);
 
     const compDir = 2;
 

@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import { motion } from 'framer-motion';
 
+import ChatRows from './ChatRows';
 import { pageVariants, pageTransition } from '../helpers/animation';
 
 interface ChatProps {
@@ -26,10 +27,8 @@ const Chat: React.FC<ChatProps> = ({ direction }) => {
             transition={pageTransition}
         >
             <div>
-                <div>Chats</div>
-                <div>Chats</div>
-                <div>Chats</div>
-                <div>Chats</div>
+                <div>Search</div>
+                <ChatRows image="asdsad" stage="Pass" title="Webdeveloper" />
             </div>
         </Container>
     );

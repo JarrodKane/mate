@@ -13,19 +13,27 @@ const Main = styled.div`
     border-bottom: 1px solid #c9c9c9;
 `;
 
+const PersonI = styled(PersonIcon)`
+    color: #8f68ff;
+`;
+
+const ChatBubble = styled(ChatBubbleOutlineIcon)`
+    color: #8f68ff;
+`;
+
 const Header = () => {
     return (
         <Main>
             <Link to="/chat">
                 <IconButton>
-                    <ChatBubbleOutlineIcon fontSize="large" />
+                    <ChatBubble fontSize="large" />
                 </IconButton>
             </Link>
             <Link to="/"> Mate</Link>
 
             <Link to="/profile">
                 <IconButton>
-                    <PersonIcon fontSize="large" />
+                    <PersonI fontSize="large" />
                 </IconButton>
             </Link>
         </Main>
@@ -33,3 +41,5 @@ const Header = () => {
 };
 
 export default Header;
+
+//8F68FF

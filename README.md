@@ -10,9 +10,16 @@ react-router for routing
 framer-motion for swipe actions
 
 
-## Website goal
+## Website
+* Made in React with TypeScript
 - [ ] allow for dragable components of matches
 - [ ] filtering of matches into stages of application
 - [ ] swipe action on cards
 - [ ] Job hunter flow
 - [ ] Job flow 
+
+## Mobile app
+* React native
+
+## Backend
+* Either Firebase or some sort of Nodejs and express, still to be decided
