@@ -10,8 +10,10 @@ interface ChatRowProps {
 
 const ChatRow = styled.div`
     display: flex;
+
     background: #fafafa;
     border: 1px solid #000000;
+    border-bottom: 1px solid #000000;
     width: 700px;
     height: 60px;
 `;
