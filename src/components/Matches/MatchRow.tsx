@@ -1,14 +1,14 @@
 import React from 'react';
 import styled from 'styled-components';
 
-interface ChatRowProps {
+interface MatchRowProps {
     image: string;
     title: string;
     stage: string;
     time?: number;
 }
 
-const ChatRow = styled.div`
+const Match = styled.div`
     display: flex;
 
     background: #fafafa;
@@ -32,14 +32,14 @@ const Image = styled.div`
 
 // TODO: Allow you to star a job if you want it to stay at the top
 
-const ChatRows: React.FC<ChatRowProps> = ({ image, title, stage, time }) => {
+const MatchRow: React.FC<MatchRowProps> = ({ image, title, stage, time }) => {
     return (
-        <ChatRow>
+        <Match>
             <Image>Image</Image>
             <Title>Title</Title>
             <Stage>Stage</Stage>
-        </ChatRow>
+        </Match>
     );
 };
 
-export default ChatRows;
+export default MatchRow;

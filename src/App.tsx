@@ -8,7 +8,7 @@ import Header from './components/Header';
 import DecPanel from './components/DecPanel';
 import Swipe from './components/Swipe';
 import Profile from './components/Profile';
-import Chat from './components/Chat';
+import Matches from './components/Matches/Matches';
 
 const WrapApp = styled.div`
     display: flex;
@@ -36,7 +36,7 @@ const App = () => {
             <AnimatePresence>
                 <Switch>
                     <Route path="/chat">
-                        <Chat direction={direction} />
+                        <Matches direction={direction} />
                     </Route>
                     <Route path="/profile">
                         <Profile direction={direction} />
