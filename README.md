@@ -10,16 +10,16 @@ react-router for routing
 framer-motion for swipe actions
 
 
-## Website
+## Web-client
 * Made in React with TypeScript
-- [ ] allow for dragable components of matches
+- [ ] allow for dragable components of matches (ReactDnD)
 - [ ] filtering of matches into stages of application
-- [ ] swipe action on cards
 - [ ] Job hunter flow
 - [ ] Job flow 
 
 ## Mobile app
 * React native
+  - [ ] Allow for swipe for yes and no
 
 ## Backend
-* Either Firebase or some sort of Nodejs and express, still to be decided
+* NodeJs and Express
